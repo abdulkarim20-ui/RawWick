@@ -1,198 +1,85 @@
-# 🔮 RawWick
+<h1 align="center">🚀🔮 RawWick</h1>
+<p align="center"><strong>Voice-Controlled AI System Agent</strong></p>
+<p align="center"><code>Generate. Execute. Complete. No Explanations.</code></p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20for-Sigma%20Devs-black?style=for-the-badge&logo=terminal&logoColor=white">
+  <img src="https://img.shields.io/github/stars/abdulkarim20-ui/RawWick?style=for-the-badge&color=purple&logo=github">
+  <img src="https://img.shields.io/github/last-commit/abdulkarim20-ui/RawWick?style=for-the-badge&color=blue">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white">
+</p>
 
-> Voice-controlled AI task completion agent. Generates and executes Python code for system operations without explanations.
+---
+
+## ⚙️ What is RawWick?
+
+**RawWick** is a voice-driven system agent. Speak a task — it generates optimized code using the Groq API and executes it instantly. Meant for power users and backend-minded developers who want voice-to-terminal execution with zero fluff.
+
+---
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| **Voice Control** | Natural command processing |
-| **Code Generation** | 87% accuracy for OS operations |
-| **Task Completion** | Focus on results, not explanations |
-| **System Control** | Manage files, network, resources |
-| **Self-Healing** | Auto-fixes failed code generation |
+- 🎙️ **Voice Control** — natural command interface
+- ⚡ **Code Generation** — powered by Groq & Python
+- 🧠 **Self-Healing** — dynamic error correction
+- ✅ **Instant Execution** — runs system-level tasks
+- 🧩 **Modular Design** — clean executor/agent split
 
-## 🚀 Setup
+---
 
-### Prerequisites
-
-- Python 3.9 or higher
-- A Groq API key (required for AI functionality)
-
-### Getting a Groq API Key
-
-1. Visit [Groq Console](https://console.groq.com/keys) and create an account
-2. After logging in, navigate to the API Keys section
-3. Click "Create API Key" and give it a name (e.g., "RawWick Assistant")
-4. Copy the generated API key (you'll only see it once!)
-5. Store it securely - you'll need it for the installation process
-
-### Tech Stack
-
-- **Core Language**: Python
-- **AI Components**: Natural Language Processing, Speech Recognition, Context Management
-- **Tools**: Git, Python Environment
-- **APIs**: Groq, Google Speech Recognition
-
-For a complete overview of the technology stack, see [TECH_STACK.md](TECH_STACK.md).
-
-### Installation
+## 🚀 Quick Start
 
 ```bash
-# 1. Clone repo
-git clone https://github.com/abdulkarim20-ui/RawWick.git && cd RawWick
-
-# 2. Setup environment
+git clone https://github.com/abdulkarim20-ui/RawWick.git
+cd RawWick
 python -m venv venv
-.\venv\Scripts\activate  # Windows
-# source venv/bin/activate  # macOS/Linux
-
-# 3. Install dependencies
+source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 pip install -r requirements.txt
 
-# 4. Configure API key
-mkdir -p Secure
-echo GROQ_API_KEY = "your-groq-api-key-here" > Secure\ApiKeys.py
+# Add your Groq API key
+mkdir Secure
+echo GROQ_API_KEY = "your-key-here" > Secure/ApiKeys.py
 
-# 5. Verify setup
-python -c "from Secure.ApiKeys import GROQ_API_KEY; print('Ready!' if GROQ_API_KEY else 'API Key missing!')"
-```
-
-Get Groq API key: [console.groq.com/keys](https://console.groq.com/keys)
-
-### Troubleshooting
-
-```bash
-# PyAudio issues
-pip install pipwin && pipwin install pyaudio  # Windows
-brew install portaudio && pip install pyaudio  # macOS
-sudo apt-get install python3-pyaudio  # Linux
-
-# Check microphone
-python -c "import speech_recognition as sr; print(sr.Microphone.list_microphone_names())"
-```
-
-### Usage
-
-```bash
 python main.py
-```
+📂 Project Structure
+text
+Copy
+Edit
+RawWick/
+├── core/
+│   └── agent.py
+├── executors/
+│   └── rawwick_executor.py
+├── models/
+│   └── groq.py
+├── utils/
+│   └── cache.py
+├── Secure/
+│   └── ApiKeys.py
+├── Listen.py
+└── main.py
+🧠 Tech Stack
+🧠 Groq API — fast code generation
 
-Speak commands → RawWick generates code → Task completed
+🔊 SpeechRecognition — mic input capture
 
-Say "exit" to quit.
+🐍 Python 3.9+ — fast and clean
 
-### RawWick: Task Completion Agent Examples
+💡 Self-Heal Loops — smart error retries
 
-RawWick is a task completion agent that generates and executes code without explanations - it just gets the job done:
+🧭 Roadmap
+ Voice command execution
 
-| System Task | With RawWick | Script Generated |
-|-------------|-------------|------------------|
-| **WiFi Management** | "Show me the WiFi passwords on my PC and save them in JSON format" | `wifi_password_export.py` |
-| **Disk Management** | "Open disk partition settings" | `disk_management.py` |
-| **Directory Analysis** | "Count the number of directories and Python files in the current location" | `directory_analyzer.py` |
-| **Storage Analysis** | "Tell me how much free space is available on my C drive" | `drive_space_check.py` |
-| **System Maintenance** | "Clean my system cache memory" | `cache_cleaner.py` |
+ Self-healing prompt regeneration
 
-### Advanced System Operations
+ Context window awareness
 
-RawWick generates Python code for OS tasks on-the-fly (87% accuracy):
+ System action logging
 
-No predefined functions - just custom code for your specific needs.
+ Plugin: browser control, Git CLI
 
-## 🧩 Structure
-```
-core/          # Agent & context management
-executors/     # Code execution engine
-models/        # Groq API integration
-utils/         # Performance utilities
-Secure/        # API keys (create manually)
-Listen.py      # Voice recognition
-main.py        # Entry point
-```
+🛡 License
+This project is licensed under the MIT License.
 
-[TECH_STACK.md](TECH_STACK.md) | [ROADMAP.md](ROADMAP.md)
-
-## Customization
-
-```python
-# models/groq.py - Modify AI behavior
-SYSTEM_PROMPT = "You are RawWick, a voice-controlled AI assistant..."
-
-# Listen.py - Adjust voice sensitivity
-PAUSE_THRESHOLD = 0.5  # Seconds of silence to mark end of phrase
-
-# executors/rawwick_executor.py - Add new capabilities
-def execute_custom_command(self, command):
-    # Your custom code here
-    pass
-```
-
-## 🔰 Quick Start Guide
-
-```
-1. Install Python 3.9+
-2. Set up venv & install dependencies
-3. Configure Groq API key
-4. Run main.py
-5. Speak your command
-```
-
-### First Commands to Try
-
-| Command | What It Does | Script Generated |
-|---------|-------------|------------------|
-| "Show WiFi passwords" | Retrieves and saves network credentials | `wifi_password_export.py` |
-| "Open disk partition settings" | Opens system disk management | `disk_management.py` |
-| "Count Python files in this directory" | Analyzes directory structure | `directory_analyzer.py` |
-| "Check C drive space" | Reports storage availability | `drive_space_check.py` |
-| "Clean cache memory" | Performs system maintenance | `cache_cleaner.py` |
-
-## 🛡️ Self-Healing Code Generation
-
-| Feature | Capability |
-|---------|------------|
-| **Error Recovery** | Auto-fixes failed code (13% of cases) without explanation |
-| **OS Detection** | Adapts scripts to Windows/Linux/macOS automatically |
-| **API Resilience** | Handles timeouts with smart retries |
-| **Path Handling** | Manages OS-specific file paths correctly |
-
-Focus on task completion, not explanations. When errors occur, RawWick fixes them silently.
-
-## 🚀 Roadmap
-
-| Timeline | Focus Areas |
-|----------|-------------|
-| **Now** | • Fix API glitches<br>• Improve code generation accuracy (87%→95%)<br>• Enhance speech recognition |
-| **Next** | • Extended speech functionality<br>• Performance optimization<br>• Advanced context management |
-| **Future** | • Custom voice models<br>• Multi-language support<br>• Plugin ecosystem |
-
-See [ROADMAP.md](ROADMAP.md) for details.
-
-## 📄 License & Author
-
-MIT License | Created by AbdulKarim (Pune, India)
-
-[AUTHOR.md](AUTHOR.md) | [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## 🙏 Improvements Over Similar Projects
-
-| Feature | RawWick Advantage |
-|---------|-------------------|
-| **Speed** | 3x faster response time |
-| **Resources** | 50% lower CPU/memory usage |
-| **Reliability** | Auto-recovery from API failures |
-| **Context** | Smarter conversation history |
-
----
-
----
-
-<p align="center">
-  <code>Built by</code> <a href="https://github.com/abdulkarim20-ui" target="_blank"><strong>@AbdulKarim</strong></a> 
-  • <a href="https://www.linkedin.com/in/abdulkarim27" target="_blank">LinkedIn</a> 
-  • <a href="https://twitter.com/Abdulkarim_S6" target="_blank">Twitter</a>
-</p>
+<p align="center"> <img src="https://img.shields.io/badge/Built%20With-❤️%20by%20AbdulKarim-black?style=flat-square"> </p> <p align="center"> <a href="https://github.com/abdulkarim20-ui" target="_blank"><strong>@AbdulKarim</strong></a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/abdulkarim27" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://twitter.com/Abdulkarim_S6" target="_blank">Twitter</a> </p> <p align="center"> <sub><code>Raw execution. No explanations. Just results.</code></sub> </p> ```
