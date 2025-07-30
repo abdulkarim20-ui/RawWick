@@ -189,4 +189,10 @@ MIT License | Created by AbdulKarim (Pune, India)
 
 ---
 
-<p align="center">Made by <a href="https://github.com/abdulkarim20-ui">AbdulKarim</a> | <a href="https://in/abdulkarim27">LinkedIn</a> | <a href="https://twitter.com/Abdulkarim_S6">Twitter</a></p>
+---
+
+<p align="center">
+  <code>Built by</code> <a href="https://github.com/abdulkarim20-ui" target="_blank"><strong>@AbdulKarim</strong></a> 
+  • <a href="https://www.linkedin.com/in/abdulkarim27" target="_blank">LinkedIn</a> 
+  • <a href="https://twitter.com/Abdulkarim_S6" target="_blank">Twitter</a>
+</p>
