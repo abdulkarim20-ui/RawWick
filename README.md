@@ -1,8 +1,4 @@
-Okay, here is a complete, polished `README.md` file in a single, ready-to-copy block.
 
-This template is designed to be easily pasted into the `README.md` file in your `RawWick` repository. It is a professionally formatted and structured document that highlights your project's features and your work as the author.
-
-````markdown
 <div align="center">
   <img src="https://raw.githubusercontent.com/abdulkarim20-ui/RawWick/main/docs/logo.png" alt="RawWick Logo" width="150" />
 </div>
