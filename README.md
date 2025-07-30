@@ -101,13 +101,6 @@ RawWick is a task completion agent that generates and executes code without expl
 
 RawWick generates Python code for OS tasks on-the-fly (87% accuracy):
 
-| Operation Type | Example Command | Script Generated |
-|----------------|----------------|------------------|
-| **Network** | "Scan my network for connected devices" | `network_scanner.py` |
-| **Security** | "Check if my ports are vulnerable" | `port_security_check.py` |
-| **Automation** | "Back up my documents daily at 8pm" | `scheduled_backup.py` |
-| **Monitoring** | "Alert me when CPU exceeds 90%" | `resource_monitor.py` |
-
 No predefined functions - just custom code for your specific needs.
 
 ## 🧩 Structure
