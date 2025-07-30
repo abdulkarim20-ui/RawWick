@@ -1,0 +1,16 @@
+# Core dependencies
+speech_recognition>=3.8.1  # Voice recognition
+rich>=12.0.0  # Terminal UI and formatting
+requests>=2.28.0  # API communication with Groq
+psutil>=5.9.0  # Process management
+
+# Threading and concurrency
+concurrent-log-handler>=0.9.20  # Thread-safe logging
+
+# Optional but recommended
+pyaudio>=0.2.11  # Required for microphone input
+
+# Development tools
+pylint>=2.15.0  # Code quality
+black>=22.3.0  # Code formatting
+pytest>=7.0.0  # Testing
